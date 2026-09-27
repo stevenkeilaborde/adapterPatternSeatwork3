@@ -1,5 +1,5 @@
 public class LibrarySystemAdapter implements SchoolManagementApp {
-    private final LibrarySystem librarySystem;
+    private LibrarySystem librarySystem;
 
     public LibrarySystemAdapter(LibrarySystem librarySystem) {
         this.librarySystem = librarySystem;

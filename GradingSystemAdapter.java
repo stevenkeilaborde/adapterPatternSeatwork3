@@ -1,5 +1,5 @@
 public class GradingSystemAdapter implements SchoolManagementApp {
-    private final GradingSystem gradingSystem;
+    private GradingSystem gradingSystem;
 
     public GradingSystemAdapter(GradingSystem gradingSystem) {
         this.gradingSystem = gradingSystem;

@@ -1,21 +1,16 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class Main {
     public static void main(String[] args) {
-        SchoolManagementApp attendance = new AttendanceSystemAdapter(new AttendanceSystem());
-        SchoolManagementApp grades    = new GradingSystemAdapter(new GradingSystem());
-        SchoolManagementApp books    = new LibrarySystemAdapter(new LibrarySystem());
+        AttendanceSystem attendanceSystem = new AttendanceSystem();
+        GradingSystem gradingSystem = new GradingSystem();
+        LibrarySystem  librarySystem = new LibrarySystem();
 
-        List<SchoolManagementApp> systems = new ArrayList<>();
-        systems.add(attendance);
-        systems.add(grades);
-        systems.add(books);
+        SchoolManagementApp AttendanceSystemAdapter = new AttendanceSystemAdapter(attendanceSystem);
+        SchoolManagementApp GradingSystemAdapter = new GradingSystemAdapter(gradingSystem);
+        SchoolManagementApp LibrarySystemAdapter = new LibrarySystemAdapter(librarySystem);
 
-        System.out.println("=== School Management Application ===");
-        for (SchoolManagementApp system : systems) {
-            system.integrateSystem();
-            System.out.println();
-        }
+        System.out.println("\nSchool Management System");
+        AttendanceSystemAdapter.integrateSystem();
+        GradingSystemAdapter.integrateSystem();
+        LibrarySystemAdapter.integrateSystem();
     }
 }
